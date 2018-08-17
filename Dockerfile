@@ -4,6 +4,10 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install
+RUN bundle install --path vendor/bundle
 
 COPY . .
+
+EXPOSE 8100
+
+CMD bundle exec ruby app.rb -o 0.0.0.0

@@ -10,7 +10,7 @@ get '/' do
         <title>This Dumb App</title>
       </head>
       <body>
-        Testing
+        This is a Sinatra test app
       </body>
     </html>
   }
